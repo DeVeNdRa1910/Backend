@@ -5,7 +5,16 @@
 
 //Setting up a basic express application
  
-Routing
-Middleware
+//Routing
+    -> pata hai
+
+//Middleware
+    ->always add before route (yadi ham chahte hai ki kuchh bhi chalane se pehle ham kuchh perform karna chahte hai to Middleware ka use karna hota hai)
+    ->let 
+    (server of youtube) ourRequest-->(Middleware)-->{(Routes)-->(Response)}
+    // jab bhi server request accept karta hai waha se route ke beeech  pahuchne tak agar aap us request ko beech me rokte ho and kuchh perform karte ho, to ye element middleware kehlata hai
+
+
+
 Request and response handling
-Error handling
+Error handling -> for that we are using erro handler
