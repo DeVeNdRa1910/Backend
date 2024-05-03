@@ -12,7 +12,7 @@
             <form action="/create" method="post">
                 <input class="block w-full rounded-md outline-none px-5 py-2 bg-zinc-700 resize-none" type="text" placeholder="Title goes here..." name="title">
                 <textarea class="block w-full rounded-md outline-none  px-5 py-2 mt-2 bg-zinc-700 resize-none" placeholder="write your task details" name="details"></textarea>
-                <input class="mt-2 bg-blue-600 px-5 py-2 rounded-md" type="submit" value="Create Task">
+                <input class="mt-2 bg-green-400 px-5 py-2 rounded-md" type="submit" value="Update Name">
             </form>
         </div>
         <div class="cards p-10 flex gap-4 flex-wrap">
@@ -20,7 +20,10 @@
                 <% files.forEach(val => { %>
                     <div class="card min-w-72 px-3 py-2 rounded-md bg-zinc-700">
                         <h1 class="text-white text-3xl tracking-tighter"><%= val %></h1>
-                        <a class="text-blue-400 inline-block mt-3" href="/file/<%= val %>" >Read More</a>
+                        <div class="flex justify-between items-center  mt-3">
+                            <a class="text-blue-400 " href="/file/<%= val %>" >Read More</a>
+                            <a class="text-gray-400 text-end hover:underline" href="/edit/<%= val %>">Edit FileName</a>
+                        </div>
                     </div>
                 <% }) %>
             <%} else { %>

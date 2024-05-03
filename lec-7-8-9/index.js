@@ -24,6 +24,10 @@ app.get('/file/:filename', function(req, res){
     })
 })
 
+app.get('/edit/:filename', function(req, res){
+    res.render("edit", {fileName: req.params.filename})
+})
+
 app.post('/create', function(req, res){
     fs.writeFile(`./files/${req.body.title.split(' ').join("")}.text` , req.body.details, function(err){
         res.redirect('/')
