@@ -17,6 +17,12 @@ app.get('/', function(req, res){
     })
 })
 
+app.post('/create', function(req, res){
+    fs.writeFile(`./files/${req.body.title.split(' ').join("")}.text` , req.body.details, function(err){
+        res.redirect('/')
+    })
+})
+
 app.get('/file/:filename', function(req, res){
     fs.readFile(`./files/${req.params.filename}`, 'utf-8' , function(err, fileData){
         console.log(fileData);
@@ -28,10 +34,12 @@ app.get('/edit/:filename', function(req, res){
     res.render("edit", {fileName: req.params.filename})
 })
 
-app.post('/create', function(req, res){
-    fs.writeFile(`./files/${req.body.title.split(' ').join("")}.text` , req.body.details, function(err){
+app.post('/edit', function(req, res){
+    fs.rename(`./files/${req.body.previous}`, `./files/${req.body.new}`, function(err){
         res.redirect('/')
     })
 })
+
+
 
 app.listen(3000);

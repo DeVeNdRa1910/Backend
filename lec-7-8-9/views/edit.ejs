@@ -9,10 +9,10 @@
 <body>
     <div class="main w-full text-white min-h-screen bg-zinc-900 p-10">
         <a class="text-blue-400 inline-block mb-10 hover:text-blue-600" href="/">Go Back To Home</a>
-        <form action="/create" method="post">
+        <form action="/edit" method="post">
             <input class="block w-full rounded-md outline-none px-5 py-2 bg-zinc-700 resize-none" type="text" placeholder="Previous name" name="previous" value=<%=   fileName %> >
             <input class="block w-full rounded-md outline-none px-5 py-2 bg-zinc-700 resize-none mt-2" type="text" placeholder="New name" name="new">
-            <input class="mt-2 bg-blue-600 px-5 py-2 rounded-md" type="submit" value="Create Task">
+            <input class="mt-2 bg-green-600 px-5 py-2 rounded-md hover:bg-green-700" type="submit" value="Update Name">
         </form>
     </div>
 </body>
