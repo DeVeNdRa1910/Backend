@@ -1,0 +1,20 @@
+form handling and working eith the forms
+handle backend process of forms and making sure the data coming from any fontend library, frameork, templating engines, we still handle it in the backend
+
+login se logout ke beech ka jo time hota hai use session kehte hai 
+
+let hamne instagram pr login kiya suppose hamne koi photo like kiya then instagram ka server hame bhool jata hai ham fir login karte hai fir like kjarte hai aur server fir bhool jata hai esa har baar hota hai to isse bachne ke liye cookie ka use kiya jata hai.
+
+hum log kuchh bhio data frontend par browser par rakh sakte hai jab bhi aap kuchh bhi request backend karte hai to wo frontend par saved data automatically backend par chala jaayga 
+
+cookie matlab wo data jo browser par saved hai
+
+// hara data jo frontend par saved hai vo encode (encrypt) hokar server par jata hai. jise blob bolte hai
+
+hamne to bheja that plain text par server ko mila blob which is not directly readable ab is cheej ko handle karna padega  ki hum us blob ko waapas readable kar sake 
+joki kiya jaata hai 
+
+//app.use(express.json()) -> ye line json[row in postman] based data ko readable karti hai
+//app.use(express.urlencoded({extended: true})) ->ye line x-www-form-urlencoded(in postman)  is type ke data ko readable banati hai.
+
+in 2 line ki help se use data ko readable kiya jata hai.(blob is not exact word)
