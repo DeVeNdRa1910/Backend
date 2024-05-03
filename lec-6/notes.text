@@ -1,0 +1,37 @@
+create a notes storing app
+
+steps
+
+Initialize a project with npm -> aata hai
+
+Install express -> aata hai
+
+Dynamic routing ->
+    Hum kar baar kuchh routes dekhte hai unmein sirf ek hi hissa change hota hai like
+    /auther/devendra
+    /auther/dhirendra
+    /auther/divyanshi
+    /auther/dishita
+    
+    - sabse pehle browser per jao 
+    - url likhiye apna jo apko chahiye and press enter
+    - ab us url route ko create kariye
+    - response bhejiye kuchh bhi
+    - ab usi url ko dynamic banaiye aur realise karo kionsa part dynamic hai aur us part ke aage : laga do
+    - 
+
+
+Setting up parser for from -> aata hai
+
+Setting up ejs for ejs pages -> install ejs from npm then setup ejs as a view engin
+
+Setting up public static files
+    -> app.use(express.static(path.join(__dirname, 'public'))) is line ka matlab sari static elements ko dhundne  ke liye public folder me jana
+    -> __dirname ka matlab hoita root Folder tak ka path usme hamne public add kardiya to ab vo public folder tak ka poth ban gaya.
+    -> app.set("view engin", "ejs") -> is line ki madad se ham render kar sakte hai ejs page ko
+    -> html ke liye views naam ke folder me jaana 
+    diffrence b/w ejs and html is you can perform calculation in ejs <%= a(operator)b%>
+
+
+
+Get data coming from frontend at backend routing
