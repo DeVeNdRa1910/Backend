@@ -1,0 +1,11 @@
+//Express.js is a Framwork
+//Introduction to Express.js
+//Express js ek npm package hai
+  -> it manage everything from receiving the Request and giving the response.
+
+//Setting up a basic express application
+ 
+Routing
+Middleware
+Request and response handling
+Error handling
