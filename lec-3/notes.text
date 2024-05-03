@@ -1,0 +1,28 @@
+// NPM understanding
+   NPM=node package manager
+   -> nodejs core mein jo pehle se installed aata hai wo module kehlaate hai
+   -> npm se download karte hai wo package hote hai
+
+
+
+//installing and uninstalling anything basics & advanced
+    -> install from npm: npm install packageKaNaam
+    -> for uninstalling: npm uninstall packageKaNaam
+    -> install a perticular version of package: npm install packageKaNaam@version(2.45)
+
+
+
+//understanding node_modules
+    -> hame isse koi lenadena nahi hai : suppose hamne koi package install kiya abc and abc depend hai kisi aur package xyz pr To zbc and xyz dono package ka code node_modules me aajata hai 
+
+
+//dependencies and devdependencies
+    -> dependencies
+    -> devdependencies: ese package jo keval web development me kaam ayenge aur jab web app ban jayga hame in packages ki jarurat nahi hogi to ham in packages ko uninstall kar denge. likwe nodemon
+    install devdependencies like : npm install -D packageKaNaam
+    transfer packages from devdependencies to dependencies : npm install packageKaNaam --save-dev
+
+
+//script - understanding default script path and custom scripts
+    -> some time we run npm start, npm run dev, npm run concurrent why?
+    -> ans is: jo command ham set karte hai un commands me run ka use karte hai and default commands me run ka use nahi karte hai
