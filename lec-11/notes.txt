@@ -1,0 +1,16 @@
+-> mongoose ki help se ham hamare server ko mongoDB ke server ko connect kar sakte hai
+-> Schema ka matlab hae=r entry ke pass kya kya details hogi
+-> We can perform crud by model
+
+//For create User
+userModel.create({
+        name: "Devendra",
+        email: "devendra@gmail.com",
+        username: "devendra2000"
+    })
+
+//For update User. we can update User on the basis of id or name(unique thing)
+userModel.findOneUpdate(findone, update, {new: true})
+findone -> kiske base pr user ko search karoge
+update -> properties of user after update, 
+{new: true} -> confirmation
