@@ -15,8 +15,13 @@ app.get('/', function(req, res){
 })
 
 app.get('/read',async function(req, res){
-    let allUsers = await userModel.find()
-    res.render("read", {users: allUsers})
+    try {
+        let allUsers = await userModel.find();
+        res.render("read", { users: allUsers });
+    } catch (error) {
+        console.error("Error fetching users:", error);
+        res.status(500).send("Error fetching users");
+    }
 })
 
 app.post('/create',async function(req, res){
@@ -30,6 +35,19 @@ app.post('/create',async function(req, res){
         image
     })
 
+    console.log(createdUser);
+
+    res.redirect('/read')
+})
+
+app.get('/edit/:id',async function(req, res){
+    let user = await userModel.findOne({_id: req.params.id})
+    res.render("edit", {user})
+})
+
+app.post('/update/:id', async function(req, res){
+    let {name, image, email} = req.body
+    let user = await userModel.findByIdAndUpdate({_id: req.params.id},{name, email, image})
     res.redirect('/read')
 })
 
