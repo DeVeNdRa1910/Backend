@@ -1,0 +1,60 @@
+Authentication and Authorization
+Authentication -> users ko validate karna
+Authorized -> only some people have authorization to do some task in Database. in other words authorization is permition 
+
+-> Server har baar bhool jata hai aap kaun ho, ab kyuki server bhjool jaata hai aap kaun ho to har baar wo har kaam ke liye appse puchhega ki aap kon ho. To remove this hudle cookies and session came into the picture.
+
+cookies is our data which saved in browser then every time browser will validate to you with Server.
+
+sabse pehle hamein kuchh alag alga cheejein seekhni hai 
+-> cookie kaise set karte hai.
+-> Bcrypt kaise use karte hai for password ecryption and decryption
+-> jwt kya hai. and jwt mein data kaise store karein and baahar nikaalein.
+
+
+//Cookie kese use Karte hai?
+
+app.get('/', function(req, res){
+    res.cookie("name", "Jahnvi Panday My Love");
+    res.send("Done")
+    //Here we set cookie on home route ab ham ab is port ke kisi bhi browser me jaye to to ye cookie hamare sath rahegi
+})
+
+app.get('/read', function(req, res){
+    console.log(req.cookies);
+    res.send("<h1>Here we set cookie on home route ab ham ab is port ke kisi bhi browser me jaye to to ye cookie hamare sath rahegi</h1>")
+})
+
+
+
+// Bcrypt kese use karte hai?
+
+let password is asdfasdf now we have to encrypt and after encryption passwrod look like whhgq7hyetqweh4ssssfgfghfghfgnwe95432bnr0qwhqewr this all things done by Bcrypt
+
+salt is rendome String and that string add in password 
+Process:- 
+        app.get('/' , function(req, res){
+            bcrypt.genSalt(10, function(err, salt){
+                bcrypt.hash("Your_Password", salt, function(err, hash){
+                    console.log("Your Password after encryption: ", hash);
+                })   
+            })
+        })
+
+decryption:- recover password
+now server compare password enter by user with encrypted password
+
+app.get('/', function(req, res){
+    bcrypt.compare("Your_Password", "encryptedPassword", function(err, result){
+        console.log(result);
+    })
+})
+
+ab agli baar jab user login karte time jo password dalega bcrypt use same formate me ecrypt karega and encrypted password ko new encrypted password se compare karega if both are same then it will return true; else return false;
+
+
+JWT=>
+jwt 3 hisso se milkar banta hai  redHissa.purpleHissa.blueHisssa 
+hamare kaam ka purple hissa hota hai kyuki sara payload red hisse me hota hai
+
+https://jwt.io/ see on that web page
