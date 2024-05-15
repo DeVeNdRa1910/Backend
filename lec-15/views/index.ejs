@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-white bg-zinc-900">
+    <div class="w-full h-screen">
+        <h1 class="text-center text-3xl mt-2">Creat User</h1>
+        <div class=" h-[70%] flex justify-center items-center">
+            <form class="flex flex-col w-[40%]" method="post" action="/create">
+                <input class="px-3 py-2 mt-2  rounded-md bg-transparent border-2 border-zing-800 outline-none" type="text" name="username" placeholder="create username"> 
+                
+                <input class="px-3 py-2 mt-2  rounded-md bg-transparent border-2 border-zing-800 outline-none" type="text" name="email" placeholder="Enter your email"> 
+                
+                <input class="px-3 py-2 mt-2  rounded-md bg-transparent border-2 border-zing-800 outline-none" type="text" name="age" placeholder="Enter Your age in years"> 
+                
+                <input class="px-3 py-2 mt-2  rounded-md bg-transparent border-2 border-zing-800 outline-none" type="password" name="password" placeholder="Create a password">
+                
+                <input class="px-5 py-2 mt-2 w-[50%] mx-auto rounded-md bg-blue-500 hover:bg-blue-700 text-xl" type="submit" value="Create User"> 
+            </form>
+        </div>
+    </div>
+</body>
+</html>

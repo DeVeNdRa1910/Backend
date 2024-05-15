@@ -1,0 +1,13 @@
+what we do in this project?
+
+create user account
+    for that we have to set mongoose
+    set schema
+    set model
+    usercreate -> password -> hashing
+    jwt token -> cookie set hai
+
+
+
+    when some come for login and he enter there password 
+    login karega to hame token milega , fir hame decryption karna hoga -> jisse hame email milega
