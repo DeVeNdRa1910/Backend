@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-white">
+    <div class="my-4 mx-5">
+        <h1 class="text-3xl">Upload file</h1>
+        <form class="my-2" autocomplete="off" action="/upload" method="post" enctype="multipart/form-data">
+            <input class="" type="file" name="image" >
+            <input class="px-5 py-2 bg-blue-500 rounded-md" type="submit" value="Upload File">
+        </form>
+    </div>
+</body>
+<!-- multer keval unhi form ko process karta hai jinka ENCRIPTION TYPE multipart/form-data hota hai (enctype="multipart/form-data)" -->
+</html>

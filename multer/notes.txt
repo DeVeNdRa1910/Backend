@@ -1,0 +1,7 @@
+user can write post
+users create karna hai
+login and resister 
+logout
+post creation
+post like karana hai
+post owner can delete
